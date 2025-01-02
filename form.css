@@ -1,0 +1,143 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: light rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+/* Title and Description */
+.title-container {
+    text-align: center;
+    margin-bottom: 0px; /* Adjusted spacing */
+}
+
+h1 {
+    color: #9b7344;
+    font-size: 3.5rem;
+    margin-bottom: 1px;
+    display: inline-block; /* Make h1 text and symbol on the same line */
+}
+
+.trademark {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-left: 2px;
+    color: #000000;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #c45e0a;
+    margin-bottom: 1px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Form and Images Container */
+.form-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    gap: 90px; /* Controls the gap between the images and the form */
+}
+
+/* Container for Images */
+.images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* Image Styling */
+#signup-image-3 {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+/*bottom imagess */
+
+.bottom-images {
+    display: flex;
+    gap: 0;
+}
+
+#signup-image, #signup-image-2 {
+    width: 200px; /* Individual image size can be customized here */
+    height: 225px;
+    object-fit: cover;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #b99c6b;
+}
+
+/* Input and Select Styling */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect on Input and Select */
+input:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #877032;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e8bd22;
+}
+
+/* Club Description Styling */
+.club-description {
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.5;
+    margin: 20px 0;
+    max-width: 600px;
+    text-align: center;
+}
