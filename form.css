@@ -48,7 +48,7 @@ p {
     max-width: 1200px;
     width: 100%;
     padding: 20px;
-    gap: 90px; /* Controls the gap between the images and the form */
+    gap: 10px; /* Controls the gap between the images and the form */
 }
 
 /* Container for Images */
