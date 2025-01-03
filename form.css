@@ -66,8 +66,8 @@ p {
     object-fit: cover;
     margin-bottom: 0;
 }
-/*bottom imagess */
 
+/* Bottom images */
 .bottom-images {
     display: flex;
     gap: 0;
@@ -85,7 +85,8 @@ p {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%; /* Change to 100% so it fills up available space */
+    max-width: 400px; /* Set a maximum width */
     display: flex;
     flex-direction: column;
 }
@@ -140,4 +141,44 @@ button:hover {
     margin: 20px 0;
     max-width: 600px;
     text-align: center;
+}
+
+/* Media Query for Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+    /* Adjust form and images for mobile view */
+    .form-images-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* Adjust images for mobile */
+    #signup-image-3 {
+        width: 90%;
+        height: auto;
+    }
+
+    #signup-image,
+    #signup-image-2 {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Adjust font sizes for mobile */
+    h1 {
+        font-size: 2rem;
+    }
+
+    label,
+    input,
+    select,
+    button {
+        font-size: 1rem;
+    }
 }
