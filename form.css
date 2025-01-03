@@ -1,4 +1,4 @@
-/* Global styles */
+/* styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: light rgb(255, 255, 255);
@@ -66,8 +66,8 @@ p {
     object-fit: cover;
     margin-bottom: 0;
 }
+/*bottom imagess */
 
-/* Bottom images */
 .bottom-images {
     display: flex;
     gap: 0;
@@ -141,44 +141,4 @@ button:hover {
     margin: 20px 0;
     max-width: 600px;
     text-align: center;
-}
-
-/* Media Query for Small Screens (Mobile Devices) */
-@media (max-width: 768px) {
-    /* Adjust form and images for mobile view */
-    .form-images-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .form-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    /* Adjust images for mobile */
-    #signup-image-3 {
-        width: 90%;
-        height: auto;
-    }
-
-    #signup-image,
-    #signup-image-2 {
-        width: 90%;
-        height: auto;
-    }
-
-    /* Adjust font sizes for mobile */
-    h1 {
-        font-size: 2rem;
-    }
-
-    label,
-    input,
-    select,
-    button {
-        font-size: 1rem;
-    }
 }
