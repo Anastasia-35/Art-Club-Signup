@@ -1,58 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Club Signup</title>
-    <link rel="stylesheet" href="form.css"> <!-- Link to External CSS -->
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Club</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <!-- Title Section -->
-    <div class="title-container">
-        <h1>Join the Art Club!</h1>
-        <p class="club-description">
-            Join the Art Club today and explore a world of creativity! Access exclusive workshops, art challenges, and connect with like-minded artists.
+
+  <!-- NAVBAR -->
+    <nav class="navbar">
+  <div class="logo-block">
+    <div class="logo">Art Club🖌</div>
+
+    <div class="logo-info">
+      <span>✉ artclubWall@email.co.za</span>
+      <span>📍 Johannesburg</span>
+      <span>☎ +27 11 234 5678</span>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="sign-up.html">Sign Up</a></li>
+  </ul>
+</nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Where Creativity Comes Alive</h1>
+      <p>
+        Paint. Sculpt. Capture. Design.  
+        Step into a warm, inspiring space where artists grow,
+        connect, and express freely.
+      </p>
+      <a href="sign-up.html" class="btn-hero">Join the Club</a>
+    </div>
+
+    <div class="hero-images">
+      <img src="images/Painting1.jpeg" class="active" alt="Painting">
+      <img src="images/Photography1.jpeg" alt="Photography">
+      <img src="images/Digital-im1.jpeg" alt="Digital Art">
+      <img src="images/Sculpture1.jpeg" alt="Sculpture">
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>Explore Our Art Worlds</h2>
+    <p class="about-intro">
+      Each creative world offers hands-on sessions, collaborative projects,
+      and opportunities to showcase your talent.
+      Whether you work with your hands or digitally,
+      there’s a place for you here.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="images/Painting3.jpeg" alt="Painting">
+        <h3>Painting</h3>
+        <p>
+          Explore acrylics, watercolor, and mixed media.
+          Learn techniques, experiment with color, and express emotion.
         </p>
-    </div>
+      </div>
+      
 
-    <!-- Form and Images Container -->
-    <div class="form-images-container">
-        <!-- Images Container -->
-        <div class="images-container">
-            <img src="3.jpg" alt="Art Club" id="signup-image-3">
-            <div class="bottom-images">
-                <img src="2.jpg" alt="Art Club" id="signup-image">
-                <img src="1jpg.jpg" alt="Art Club" id="signup-image-2">
-            </div>
-        </div>
+      <div class="card">
+        <img src="images/Photography1.jpeg" alt="Photography">
+        <h3>Photography</h3>
+        <p>
+          Capture powerful moments through composition and light.
+          Learn creative photography and editing techniques.
+        </p>
+      </div>
 
-        <!-- Signup Form -->
-        <form action="#" method="POST" class="form-container">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      <div class="card">
+        <img src="images/Clay1.jpeg" alt="Clay Art">
+        <h3>Clay & Sculpture</h3>
+        <p>
+          Shape imagination into form.
+          Work with clay and sculpting tools while learning structure and balance.
+        </p>
+      </div>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Create a password" required>
-
-            <label for="favorite-art">Favorite Art Style</label>
-            <select id="favorite-art" name="favorite-art" required>
-                <option value="">Choose your favorite art style</option>
-                <option value="painting">Painting</option>
-                <option value="sculpture">Sculpture</option>
-                <option value="digital">Digital Art</option>
-                <option value="photography">Photography</option>
-            </select>
-
-            <button type="submit">Join Now</button>
-        </form>
-    </div>
-
-    <!-- Link to External JavaScript -->
-    <script src="form.js"></script>
+      
     
+
+      <div class="card">
+        <img src="images/Digital-im1.jpeg" alt="Digital Art">
+        <h3>Digital Art</h3>
+        <p>
+          Design illustrations and posters using modern tools
+          while building valuable creative tech skills.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="form.js"></script>
 </body>
 </html>
