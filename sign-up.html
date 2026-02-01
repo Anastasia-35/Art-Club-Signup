@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Art Club</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Art Club🖌</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a class="active" href="sign-up.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- SIGNUP SECTION -->
+  <section class="form-section">
+
+    <form class="form-container" id="signupForm">
+      <!-- Intro inside form -->
+      <div class="signup-intro">
+        <h1>Become Part of the Art Club 🖌</h1>
+        <p>
+          Join a creative community of painters, sculptors, photographers, and digital artists. 
+          Explore, learn, and share your creativity in a professional, inspiring space.
+        </p>
+      </div>
+
+      <h2>Sign Up & Start Creating</h2>
+
+      <div class="form-group">
+        <input type="text" required>
+        <label>Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" required>
+        <label>Email Address</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" required>
+        <label>Phone Number</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" required>
+        <label>Create a Password</label>
+      </div>
+
+      <div class="form-group">
+        <select required>
+          <option value="" disabled selected>Select Your Favorite Art Style</option>
+          <option>Painting</option>
+          <option>Sculpture</option>
+          <option>Digital Art</option>
+          <option>Photography</option>
+        </select>
+      </div>
+
+      <button type="submit">Join the Club</button>
+
+      <p class="form-note">
+        🎨 Free to join • No experience required
+      </p>
+    </form>
+
+  </section>
+
+  <!-- JS -->
+  <script src="form.js"></script>
+
+</body>
+</html>
