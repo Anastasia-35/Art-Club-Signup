@@ -1,144 +1,507 @@
-/* styles */
+/* -----------------------------
+RESET & BASE
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: light rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
-    display: flex;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #877032;
+  line-height: 1.7;
+}
+
+/* -----------------------------
+NAVBAR
+----------------------------- */
+.navbar {
+ font-family: 'Playfair Display', serif;
+ font-size: large;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 35px 40px;
+  background: #a3906f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color:  #281c04;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #281c04;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b18f14;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logo-info {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #281c04;
+  opacity: 0.9;
+  border-top: 1px solid rgb(33, 19, 2);
+  padding-top: 6px;
+}
+
+.logo-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .logo-info {
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: flex-start;
-    overflow-x: hidden;
+    gap: 4px;
+  }
 }
 
-/* Title and Description */
-.title-container {
-    text-align: center;
-    margin-bottom: 0px; /* Adjusted spacing */
+/* -----------------------------
+HERO SECTION
+----------------------------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 90px 50px;
+
+  background-image: url("images/Background1.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* ✅ NO ZOOM / NO CROP */
+  background-color: #fdf2e3;
+
+  min-height: 90vh;
 }
 
-h1 {
-    color: #9b7344;
-    font-size: 3.5rem;
-    margin-bottom: 1px;
-    display: inline-block; /* Make h1 text and symbol on the same line */
+.hero-text {
+  background: rgba(80, 55, 35, 0.65);
+  padding: 60px;
+  border-radius: 30px;
+  max-width: 650px;
+  color: #fff;
 }
 
-.trademark {
-    font-size: 1.5rem;
-    vertical-align: middle;
-    margin-left: 2px;
-    color: #000000;
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.2rem;
-    color: #c45e0a;
-    margin-bottom: 1px;
-    max-width: 600px;
-    text-align: center;
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 35px;
 }
 
-/* Form and Images Container */
-.form-images-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
+.btn-hero {
+  display: inline-block;
+  padding: 14px 42px;
+  background: #b18f14;
+  color: #3a2a15;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #877032;
+  color: #fff;
+}
+
+/* HERO IMAGES */
+.hero-images {
+  position: relative;
+  width: 250px;
+  height: 420px;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-images img.active {
+  opacity: 1;
+}
+
+/* -----------------------------
+ABOUT SECTION
+----------------------------- */
+.about {
+  padding: 80px 40px;
+  background: #fff8f0;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #3a2a15;
+  margin-bottom: 20px;
+}
+
+.about-intro {
+
+  max-width: 850px;
+  margin: 0 auto 60px;
+  font-size: 1.15rem;
+  color: #877032;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  width: 260px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+font-family: 'Playfair Display', serif;
+
+  font-size: 1.35rem;
+  color: #877032;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* -----------------------------
+RESPONSIVE
+----------------------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 60px 30px;
+  }
+
+  .hero-text {
+    padding: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+}
+/* -----------------------------
+GALLERY PAGE
+----------------------------- */
+.gallery {
+  padding: 80px 40px;
+  background: #fff8f0;
+  text-align: center;
+  background-attachment: parallax effect;
+}
+
+.gallery h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #3a2a15;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.gallery-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  color:  #877032;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+.category-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #3a2a15;
+  margin: 40px 0 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Gallery grid: 4 per row, responsive */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.gallery-item img {
+    background: #3a2a15;
     width: 100%;
-    padding: 20px;
-    gap: 20px; /* Controls the gap between the images and the form */
-}
-
-/* Container for Images */
-.images-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-}
-
-/* Image Styling */
-#signup-image-3 {
-    width: 400px;
-    height: 220px;
-    object-fit: cover;
-    margin-bottom: 0;
-}
-/*bottom imagess */
-
-.bottom-images {
-    display: flex;
-    gap: 0;
-}
-
-#signup-image, #signup-image-2 {
-    width: 200px; /* Individual image size can be customized here */
-    height: 225px;
-    object-fit: cover;
-}
-
-/* Form Styling */
-.form-container {
-    background-color: #ffffff;
-    padding: 30px;
+    height: 200px; /* fixed height for uniform cards */
+    object-fit: cover; /* fills the cubicle nicely without stretching */
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Change to 100% so it fills up available space */
-    max-width: 400px; /* Set a maximum width */
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 10px;
 }
 
-/* Label Styling */
-label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #b99c6b;
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
 }
 
-/* Input and Select Styling */
-input, select {
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* ✅ no crop */
+  border-radius: 12px;
+}
+
+.category-desc {
+  max-width: 900px;
+  margin: 12px auto 45px;
+  padding: 28px 32px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.03),
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    linear-gradient(135deg, #e8d8b5, #d6bf94);
+
+  color: #3b2a1a;
+  font-size: 16.5px;
+  line-height: 1.8;
+
+  border-radius: 16px;
+  box-shadow:
+    inset 0 0 25px rgba(0,0,0,0.08),
+    0 8px 22px rgba(0,0,0,0.18);
+
+  font-family: 'Playfair Display', serif;
+}
+
+.category-box {
+  margin: 60px auto;
+  padding: 50px 45px;
+
+  max-width: 1200px;
+
+   border: 1px solid rgba(120, 80, 40, 0.25);
+  background: rgba(255, 248, 230, 0.85); /* soft parchment */
+  border-radius: 50px;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.18),
+    inset 0 0 25px rgba(255,255,255,0.4);
+
+  backdrop-filter: blur(2px);
+}
+
+.category-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #6b4b2a;
+  margin-bottom: 14px;
+}
+
+/* -----------------------------
+Signup Section
+----------------------------- */
+/* SECTION BACKGROUND */
+/* FORM SECTION */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #ffffff; /* main white background */
+  overflow: hidden;
+}
+
+/* Blurred Background Image */
+.form-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/Photography9.jpeg') center/cover no-repeat;
+  filter: blur(8px) brightness(0.6); /* blur + dim so text is readable */
+  z-index: 0;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    position: relative;
+  z-index: 1; /* above blurred background */
+  background: rgba(245, 235, 210, 0.95); /* old paper style for form */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 450px;
+  font-family: 'Poppins', sans-serif;
+  color: #3a2a15; /* dark brown */
+  text-align: center;
+}
+
+/* SIGNUP INTRO */
+.signup-intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.signup-intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* FORM TITLE */
+.form-container h2 {
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #3a2a15;
+}
+
+/* FLOATING LABELS */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 14px 14px 14px;
+  border-radius: 12px;
+  border: 1px solid #b18f14;
+  background: transparent;
+  font-size: 1rem;
+  color: #3a2a15;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  pointer-events: none;
+  font-size: 0.95rem;
+  color: #6b4f2a;
+  transition: 0.3s;
+  background: rgba(245, 235, 210, 0.95);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+/* move label when input is focused or filled */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #3a2a15;
+}
+
+/* BUTTON */
+.form-container button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #b18f14;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background: #877032;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* NOTE */
+.form-note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #3a2a15;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .form-section {
+    padding: 40px 15px;
+  }
+
+  .form-container {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-/* Focus Effect on Input and Select */
-input:focus, select:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
-}
-
-/* Button Styling */
-button {
-    width: 100%;
-    padding: 14px;
-    background-color: #877032;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #e8bd22;
-}
-
-/* Club Description Styling */
-.club-description {
-    font-size: 1.1rem;
-    color: #000000;
-    line-height: 1.5;
-    margin: 20px 0;
-    max-width: 600px;
-    text-align: center;
+  }
 }
